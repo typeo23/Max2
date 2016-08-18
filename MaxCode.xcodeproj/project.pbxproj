@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		664408691D657ED9006745FE /* MaxCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MaxCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		6644086C1D657ED9006745FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		664408731D65809C006745FE /* grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = grid.h; path = ../grid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				6644086C1D657ED9006745FE /* main.cpp */,
+				664408731D65809C006745FE /* grid.h */,
 			);
 			path = MaxCode;
 			sourceTree = "<group>";
@@ -128,7 +130,7 @@
 		6644086E1D657ED9006745FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -172,7 +174,7 @@
 		6644086F1D657ED9006745FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -209,6 +211,9 @@
 		664408711D657ED9006745FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lfftw3f";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +221,9 @@
 		664408721D657ED9006745FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lfftw3f";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
